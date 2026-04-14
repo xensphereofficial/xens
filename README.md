@@ -8,4 +8,11 @@
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
+
+  ## Logo placement
+
+  Put your real brand logo file at `public/logo.png`.
+
+  - Recommended size: `512x512` or higher (square PNG with transparent background)
+  - The website auto-uses this logo in the navbar, footer, and social metadata
   

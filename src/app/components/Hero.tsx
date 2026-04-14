@@ -80,7 +80,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
-          <button className="group relative px-8 py-4 bg-[#dcfd68] text-black rounded-full overflow-hidden transition-all hover:scale-105">
+          <a
+            href="#get-started"
+            className="group relative px-8 py-4 bg-[#dcfd68] text-black rounded-full overflow-hidden transition-all hover:scale-105"
+          >
             <span className="relative z-10 flex items-center gap-2">
               Get Started
               <Zap size={20} />
@@ -91,11 +94,14 @@ export function Hero() {
               whileHover={{ scale: 1, opacity: 0.2 }}
               transition={{ duration: 0.4 }}
             />
-          </button>
+          </a>
 
-          <button className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-all hover:scale-105">
+          <a
+            href="#products"
+            className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-all hover:scale-105"
+          >
             Explore Products
-          </button>
+          </a>
         </motion.div>
 
         {/* Floating Elements */}

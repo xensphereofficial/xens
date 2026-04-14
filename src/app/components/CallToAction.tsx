@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export function CallToAction() {
   return (
-    <section className="relative py-32 bg-black overflow-hidden">
+    <section id="get-started" className="relative py-32 bg-black overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,253,104,0.15),transparent_70%)]" />
       <motion.div
@@ -91,7 +91,8 @@ export function CallToAction() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <motion.button
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group relative px-10 py-5 bg-[#dcfd68] text-black text-lg rounded-full overflow-hidden shadow-2xl shadow-[#dcfd68]/30"
@@ -111,7 +112,7 @@ export function CallToAction() {
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Trust Indicators */}

@@ -26,7 +26,7 @@ export function WhyChoose() {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-black to-[#0a0a0a] overflow-hidden">
+    <section id="why-choose" className="relative py-32 bg-gradient-to-b from-black to-[#0a0a0a] overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-20 left-0 w-72 h-72 bg-[#dcfd68]/10 rounded-full blur-[100px]" />
       <div className="absolute bottom-20 right-0 w-72 h-72 bg-[#dcfd68]/10 rounded-full blur-[100px]" />

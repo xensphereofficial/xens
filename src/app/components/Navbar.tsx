@@ -1,9 +1,33 @@
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { BrandLogo } from './BrandLogo';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
+  const sections = ['hero', 'about', 'products', 'why-choose', 'contact'];
+
+  useEffect(() => {
+    const onScroll = () => {
+      const middleOfScreen = window.scrollY + window.innerHeight * 0.35;
+      let current = 'hero';
+
+      for (const id of sections) {
+        const section = document.getElementById(id);
+        if (!section) continue;
+        if (middleOfScreen >= section.offsetTop) {
+          current = id;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -23,39 +47,42 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
-            className="flex items-center gap-2 cursor-pointer"
+            className="cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('hero')}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-[#dcfd68] to-[#a8c952] rounded-lg flex items-center justify-center shadow-lg shadow-[#dcfd68]/30">
-              <span className="text-black">X</span>
-            </div>
-            <span className="text-2xl text-white">Xensphere</span>
+            <BrandLogo />
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-gray-300 hover:text-[#dcfd68] transition-colors"
+              className={`transition-colors ${activeSection === 'hero' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-300 hover:text-[#dcfd68] transition-colors"
+              className={`transition-colors ${activeSection === 'about' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('products')}
-              className="text-gray-300 hover:text-[#dcfd68] transition-colors"
+              className={`transition-colors ${activeSection === 'products' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
             >
               Products
             </button>
             <button
+              onClick={() => scrollToSection('why-choose')}
+              className={`transition-colors ${activeSection === 'why-choose' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
+            >
+              Why Us
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-300 hover:text-[#dcfd68] transition-colors"
+              className={`transition-colors ${activeSection === 'contact' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
             >
               Contact
             </button>
@@ -63,7 +90,10 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="px-6 py-2 bg-[#dcfd68] text-black rounded-full hover:bg-white transition-all hover:scale-105 shadow-lg shadow-[#dcfd68]/30">
+            <button
+              onClick={() => scrollToSection('get-started')}
+              className="px-6 py-2 bg-[#dcfd68] text-black rounded-full hover:bg-white transition-all hover:scale-105 shadow-lg shadow-[#dcfd68]/30"
+            >
               Get Started
             </button>
           </div>
@@ -88,29 +118,38 @@ export function Navbar() {
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection('hero')}
-                className="text-gray-300 hover:text-[#dcfd68] transition-colors text-left"
+                className={`transition-colors text-left ${activeSection === 'hero' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-gray-300 hover:text-[#dcfd68] transition-colors text-left"
+                className={`transition-colors text-left ${activeSection === 'about' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('products')}
-                className="text-gray-300 hover:text-[#dcfd68] transition-colors text-left"
+                className={`transition-colors text-left ${activeSection === 'products' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
               >
                 Products
               </button>
               <button
+                onClick={() => scrollToSection('why-choose')}
+                className={`transition-colors text-left ${activeSection === 'why-choose' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
+              >
+                Why Us
+              </button>
+              <button
                 onClick={() => scrollToSection('contact')}
-                className="text-gray-300 hover:text-[#dcfd68] transition-colors text-left"
+                className={`transition-colors text-left ${activeSection === 'contact' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
               >
                 Contact
               </button>
-              <button className="px-6 py-2 bg-[#dcfd68] text-black rounded-full hover:bg-white transition-all w-full">
+              <button
+                onClick={() => scrollToSection('get-started')}
+                className="px-6 py-2 bg-[#dcfd68] text-black rounded-full hover:bg-white transition-all w-full"
+              >
                 Get Started
               </button>
             </div>

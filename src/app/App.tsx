@@ -5,6 +5,7 @@ import { Products } from './components/Products';
 import { WhyChoose } from './components/WhyChoose';
 import { CallToAction } from './components/CallToAction';
 import { Footer } from './components/Footer';
+import { Faq } from './components/Faq';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <About />
         <Products />
         <WhyChoose />
+        <Faq />
         <CallToAction />
         <Footer />
       </main>

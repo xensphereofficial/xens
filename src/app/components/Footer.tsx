@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Twitter, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -22,12 +23,9 @@ export function Footer() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2 mb-4"
+              className="mb-4"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-[#dcfd68] to-[#a8c952] rounded-lg flex items-center justify-center shadow-lg shadow-[#dcfd68]/30">
-                <span className="text-black">X</span>
-              </div>
-              <span className="text-2xl text-white">Xensphere</span>
+              <BrandLogo />
             </motion.div>
             <p className="text-gray-400 mb-6 max-w-sm">
               Empowering creators to build, launch, and scale their digital product 
@@ -62,7 +60,8 @@ export function Footer() {
                 { label: 'Home', id: 'hero' },
                 { label: 'About', id: 'about' },
                 { label: 'Products', id: 'products' },
-                { label: 'Pricing', id: 'products' },
+                { label: 'Why Us', id: 'why-choose' },
+                { label: 'Get Started', id: 'get-started' },
               ].map((link, index) => (
                 <li key={index}>
                   <button
