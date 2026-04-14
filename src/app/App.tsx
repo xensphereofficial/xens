@@ -1,13 +1,15 @@
+import { Suspense, lazy } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Products } from './components/Products';
-import { WhyChoose } from './components/WhyChoose';
-import { CallToAction } from './components/CallToAction';
-import { Footer } from './components/Footer';
-import { Faq } from './components/Faq';
 import { MobileStickyCta } from './components/MobileStickyCta';
-import { HowItWorks } from './components/HowItWorks';
+
+const About = lazy(() => import('./components/About').then((module) => ({ default: module.About })));
+const Products = lazy(() => import('./components/Products').then((module) => ({ default: module.Products })));
+const HowItWorks = lazy(() => import('./components/HowItWorks').then((module) => ({ default: module.HowItWorks })));
+const WhyChoose = lazy(() => import('./components/WhyChoose').then((module) => ({ default: module.WhyChoose })));
+const Faq = lazy(() => import('./components/Faq').then((module) => ({ default: module.Faq })));
+const CallToAction = lazy(() => import('./components/CallToAction').then((module) => ({ default: module.CallToAction })));
+const Footer = lazy(() => import('./components/Footer').then((module) => ({ default: module.Footer })));
 
 export default function App() {
   return (
@@ -17,13 +19,15 @@ export default function App() {
         <div id="hero">
           <Hero />
         </div>
-        <About />
-        <Products />
-        <HowItWorks />
-        <WhyChoose />
-        <Faq />
-        <CallToAction />
-        <Footer />
+        <Suspense fallback={<div className="h-24" />}>
+          <About />
+          <Products />
+          <HowItWorks />
+          <WhyChoose />
+          <Faq />
+          <CallToAction />
+          <Footer />
+        </Suspense>
       </main>
       <MobileStickyCta />
     </div>

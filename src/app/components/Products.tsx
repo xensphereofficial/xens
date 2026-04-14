@@ -7,37 +7,37 @@ export function Products() {
       icon: <GraduationCap className="w-8 h-8" />,
       title: 'Online Courses',
       description: 'Comprehensive learning experiences with video content, quizzes, and certificates.',
-      image: 'https://images.unsplash.com/photo-1762330916233-221b49fce7f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwY291cnNlJTIwb25saW5lJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzc2MTk1MzMwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1762330916233-221b49fce7f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwY291cnNlJTIwb25saW5lJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzc2MTk1MzMwfDA&ixlib=rb-4.1.0&q=70&w=640',
     },
     {
       icon: <Video className="w-8 h-8" />,
       title: 'Reels Packs',
       description: 'High-quality video content packs designed for social media success.',
-      image: 'https://images.unsplash.com/photo-1775559049057-e527a9568246?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHJlZWxzJTIwY29udGVudCUyMGNyZWF0aW9ufGVufDF8fHx8MTc3NjE5NTMzMHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1775559049057-e527a9568246?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHJlZWxzJTIwY29udGVudCUyMGNyZWF0aW9ufGVufDF8fHx8MTc3NjE5NTMzMHww&ixlib=rb-4.1.0&q=70&w=640',
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: 'Design Templates',
       description: 'Professional templates for presentations, graphics, and marketing materials.',
-      image: 'https://images.unsplash.com/photo-1487338875411-8880f74114a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjB0ZW1wbGF0ZXMlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzc2MTk1MzMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1487338875411-8880f74114a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjB0ZW1wbGF0ZXMlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzc2MTk1MzMxfDA&ixlib=rb-4.1.0&q=70&w=640',
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'AI Tools',
       description: 'Cutting-edge artificial intelligence tools to automate and optimize your workflow.',
-      image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzYxNDkwNjN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzYxNDkwNjN8MA&ixlib=rb-4.1.0&q=70&w=640',
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Marketing Kits',
       description: 'Complete digital marketing packages including assets, guides, and strategies.',
-      image: 'https://images.unsplash.com/photo-1726066012749-f81bf4422d4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwdG9vbHN8ZW58MXx8fHwxNzc2MTk1MzMyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1726066012749-f81bf4422d4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwdG9vbHN8ZW58MXx8fHwxNzc2MTk1MzMyfDA&ixlib=rb-4.1.0&q=70&w=640',
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
       title: 'E-Books',
       description: 'Digital books covering various topics from business to personal development.',
-      image: 'https://images.unsplash.com/photo-1767528402946-e9faf7aac858?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlYm9vayUyMGRpZ2l0YWwlMjBsaWJyYXJ5fGVufDF8fHx8MTc3NjE5NTMzMnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1767528402946-e9faf7aac858?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlYm9vayUyMGRpZ2l0YWwlMjBsaWJyYXJ5fGVufDF8fHx8MTc3NjE5NTMzMnww&ixlib=rb-4.1.0&q=70&w=640',
     },
   ];
 
@@ -80,6 +80,10 @@ export function Products() {
                   <img
                     src={product.image}
                     alt={product.title}
+                    loading="lazy"
+                    decoding="async"
+                    width={640}
+                    height={320}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />

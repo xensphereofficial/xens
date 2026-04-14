@@ -9,7 +9,7 @@ export function Hero() {
       
       {/* Gradient Orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#dcfd68] rounded-full blur-[120px] opacity-20"
+        className="hidden md:block absolute top-1/4 left-1/4 w-96 h-96 bg-[#dcfd68] rounded-full blur-[120px] opacity-20"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.2, 0.3, 0.2],
@@ -21,7 +21,7 @@ export function Hero() {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#dcfd68] rounded-full blur-[120px] opacity-20"
+        className="hidden md:block absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#dcfd68] rounded-full blur-[120px] opacity-20"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.3, 0.2, 0.3],
@@ -122,7 +122,7 @@ export function Hero() {
 
         {/* Floating Elements */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 border border-[#dcfd68]/30 rounded-lg"
+          className="hidden md:block absolute top-20 left-10 w-20 h-20 border border-[#dcfd68]/30 rounded-lg"
           animate={{
             y: [0, -20, 0],
             rotate: [0, 90, 0],
@@ -134,7 +134,7 @@ export function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-16 h-16 border border-white/20 rounded-full"
+          className="hidden md:block absolute bottom-20 right-10 w-16 h-16 border border-white/20 rounded-full"
           animate={{
             y: [0, 20, 0],
             scale: [1, 1.2, 1],
@@ -149,7 +149,7 @@ export function Hero() {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2"
+        className="hidden md:block absolute bottom-10 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
