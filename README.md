@@ -15,4 +15,6 @@
 
   - Recommended size: `512x512` or higher (square PNG with transparent background)
   - The website auto-uses this logo in the navbar, footer, and social metadata
+  - If needed, these names also work: `logo.webp`, `logo.jpg`, `logo.jpeg`, `favicon.png`
+  - For best SEO/social previews, keep `public/logo.png` as your primary brand image
   

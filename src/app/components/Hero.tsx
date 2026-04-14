@@ -3,7 +3,7 @@ import { Sparkles, Zap } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-24 md:pt-0">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
       
@@ -33,15 +33,15 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center justify-center gap-2 mb-6"
+          className="flex items-center justify-center gap-2 mb-5"
         >
           <Sparkles className="text-[#dcfd68]" size={24} />
-          <span className="text-[#dcfd68] uppercase tracking-widest">
+          <span className="text-[#dcfd68] uppercase tracking-[0.18em] text-xs sm:text-sm">
             Welcome to the Future
           </span>
         </motion.div>
@@ -50,7 +50,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl mb-6 text-white tracking-tight"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-6 text-white tracking-tight leading-tight"
         >
           Start Your Digital Products
           <br />
@@ -69,7 +69,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto"
+          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto"
         >
           Sell smarter. Earn faster. Scale globally.
         </motion.p>
@@ -77,12 +77,28 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex flex-wrap items-center justify-center gap-2.5 mb-10"
+        >
+          {['No coding required', 'Instant delivery', 'Global audience', '24/7 automated sales'].map((item) => (
+            <span
+              key={item}
+              className="px-3 py-1.5 text-xs sm:text-sm text-[#dcfd68] border border-[#dcfd68]/40 rounded-full bg-[#dcfd68]/10"
+            >
+              {item}
+            </span>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
         >
           <a
             href="#get-started"
-            className="group relative px-8 py-4 bg-[#dcfd68] text-black rounded-full overflow-hidden transition-all hover:scale-105"
+            className="group relative w-full sm:w-auto text-center px-8 py-4 bg-[#dcfd68] text-black rounded-full overflow-hidden transition-all hover:scale-105"
           >
             <span className="relative z-10 flex items-center gap-2">
               Get Started
@@ -98,7 +114,7 @@ export function Hero() {
 
           <a
             href="#products"
-            className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-all hover:scale-105"
+            className="w-full sm:w-auto text-center px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition-all hover:scale-105"
           >
             Explore Products
           </a>
@@ -133,7 +149,7 @@ export function Hero() {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
