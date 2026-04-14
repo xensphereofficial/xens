@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { BrandLogo } from './BrandLogo';
@@ -38,21 +37,13 @@ export function Navbar() {
   };
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            className="cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => scrollToSection('hero')}
-          >
+          <div className="cursor-pointer transition-transform hover:scale-[1.03]" onClick={() => scrollToSection('hero')}>
             <BrandLogo size={36} textClassName="text-lg sm:text-xl md:text-2xl text-white" />
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -115,12 +106,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 py-4 border-t border-white/10"
-          >
+          <div className="md:hidden mt-4 py-4 border-t border-white/10">
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection('hero')}
@@ -165,9 +151,9 @@ export function Navbar() {
                 Get Started
               </button>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 }
