@@ -6,7 +6,7 @@ import { BrandLogo } from './BrandLogo';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-  const sections = ['hero', 'about', 'products', 'why-choose', 'contact'];
+  const sections = ['hero', 'about', 'products', 'how-it-works', 'why-choose', 'contact'];
 
   useEffect(() => {
     const onScroll = () => {
@@ -43,7 +43,7 @@ export function Navbar() {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
@@ -51,7 +51,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('hero')}
           >
-            <BrandLogo />
+            <BrandLogo size={36} textClassName="text-lg sm:text-xl md:text-2xl text-white" />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -73,6 +73,12 @@ export function Navbar() {
               className={`transition-colors ${activeSection === 'products' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
             >
               Products
+            </button>
+            <button
+              onClick={() => scrollToSection('how-it-works')}
+              className={`transition-colors ${activeSection === 'how-it-works' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
+            >
+              Process
             </button>
             <button
               onClick={() => scrollToSection('why-choose')}
@@ -133,6 +139,12 @@ export function Navbar() {
                 className={`transition-colors text-left ${activeSection === 'products' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
               >
                 Products
+              </button>
+              <button
+                onClick={() => scrollToSection('how-it-works')}
+                className={`transition-colors text-left ${activeSection === 'how-it-works' ? 'text-[#dcfd68]' : 'text-gray-300 hover:text-[#dcfd68]'}`}
+              >
+                Process
               </button>
               <button
                 onClick={() => scrollToSection('why-choose')}

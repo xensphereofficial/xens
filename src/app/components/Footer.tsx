@@ -60,6 +60,7 @@ export function Footer() {
                 { label: 'Home', id: 'hero' },
                 { label: 'About', id: 'about' },
                 { label: 'Products', id: 'products' },
+                { label: 'Process', id: 'how-it-works' },
                 { label: 'Why Us', id: 'why-choose' },
                 { label: 'Get Started', id: 'get-started' },
               ].map((link, index) => (
@@ -88,6 +89,12 @@ export function Footer() {
                   hello@xensphere.com
                 </a>
               </li>
+              <li>
+                <a href="tel:+923393009400" className="text-gray-400 hover:text-[#dcfd68] transition-colors">
+                  +92 339 3009400
+                </a>
+              </li>
+              <li className="text-gray-400">Hamdard Chowk, Lahore</li>
               <li className="text-gray-400">Support available 24/7</li>
             </ul>
           </div>

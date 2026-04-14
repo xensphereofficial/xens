@@ -6,7 +6,7 @@ type BrandLogoProps = {
   textClassName?: string;
 };
 
-export function BrandLogo({ size = 40, showText = true, textClassName = "text-2xl text-white" }: BrandLogoProps) {
+export function BrandLogo({ size = 40, showText = true, textClassName = "text-xl sm:text-2xl text-white" }: BrandLogoProps) {
   const candidates = useMemo(
     () => ['/logo.png', '/logo.webp', '/logo.jpg', '/logo.jpeg', '/favicon.png'],
     [],
@@ -36,7 +36,7 @@ export function BrandLogo({ size = 40, showText = true, textClassName = "text-2x
         ) : null}
         {showFallback ? <span className="text-black text-lg">X</span> : null}
       </div>
-      {showText ? <span className={textClassName}>Xensphere</span> : null}
+      {showText ? <span className={`${textClassName} whitespace-nowrap`}>Xensphere</span> : null}
     </div>
   );
 }
