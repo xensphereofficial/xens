@@ -1,0 +1,25 @@
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Products } from './components/Products';
+import { WhyChoose } from './components/WhyChoose';
+import { CallToAction } from './components/CallToAction';
+import { Footer } from './components/Footer';
+
+export default function App() {
+  return (
+    <div className="bg-black">
+      <Navbar />
+      <main>
+        <div id="hero">
+          <Hero />
+        </div>
+        <About />
+        <Products />
+        <WhyChoose />
+        <CallToAction />
+        <Footer />
+      </main>
+    </div>
+  );
+}
